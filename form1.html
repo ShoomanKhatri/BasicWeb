@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Registration form of BCA</title>
+        <link rel="stylesheet" href="stylex.css">
+        <style>
+            body {
+                font-family:arial;
+                background-color:#1a8cff;
+            }
+            input[type=text],input[type=password]
+            {
+                width:25%;
+                padding:15px;
+                margin:5px 0 22px 0;
+                display:inline-block;
+                border:none;
+                background:#f1f1f1;
+            }
+            input[type=text]:focus,input[type=password]:focus
+            {
+                background:rgb(223, 120, 25);
+                outline:none;
+            }
+            button[type=button]:focus
+            {
+                background:red;
+                outline:none;
+            }
+        </style>
+    </head>
+    <body>
+        <label style="color:blue">First Name</label> 
+            <input type="text" name="f_name" >
+            <label> Middle Name</label>
+            <input type="text"name="m_name">
+            <label>Last Name</label>
+            <input type="text"name="l_name"><br>
+            <label>Select Your Gender</label><br>
+            <input type="radio">Male<br>
+            <input type="radio">Female<br>
+            <label>Type your address</label>
+            <input type="text"><br>
+            <label>Contact No</label>
+            <input type="text"><br>
+            <label>Qualification</label>
+            <select type ="combo">
+                <option>SLC</option>
+                <option>SEE</option>
+            </select><br>
+            <label>Select Date</label>
+            <input type="date"><br>
+            <label>E-mail Address</label>
+            <input type="text"><br>
+            <label>Division</label>
+            <select type="combo">
+                <option>Dist</option>
+                <option>First</option>
+                <option>Second</option>
+                <option>Third</option>
+            </select><br>
+
+            <label>Select your Priority</label>
+            <input type="checkbox">
+            <label>BMC</label>
+            <input type="checkbox">
+            <labe>LCC</label>
+                <input type="checkbox">
+                <label>Nepathya</label><br>
+                <label>User Name</label>
+                <input type="text"><br>
+                <label>Password</label>
+                <input type="password"><br>
+                <label>Confirm Password</label>
+                <input type="password"><br>
+                <input type="file" name="filename"><br>
+                <button type="button">Submit</button>
+                <button type="button">Reset</button>
+            </body>
+</html>

@@ -1,0 +1,13 @@
+body{
+    background-color:gray;
+}
+input[type=text]{
+    background:yellow;
+    padding:5px;
+}
+label{
+    font-size:12pt;
+    font-style:italic;
+    font-style:bold;
+
+}

@@ -1,0 +1,5 @@
+HTML Tags
+Paragraph Tags.
+Heading Tags(h1-h2)
+Image Tags
+Block element Tags(div tags)

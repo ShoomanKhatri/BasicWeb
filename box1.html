@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>
+            Box
+        </title>
+        <style>
+            #logo{ float:left;
+            }
+            #logo-img{ height:50px;
+            }
+            .topnav a.active{
+                background-color:green;
+                color:white;}
+
+            .topnav a:hover{
+                background-color:lightskyblue;
+                color:white;
+            }
+            ul {
+                list-style-type:none;
+                margin:o;padding:0;
+                overflow:hidden;
+                background-color:black;
+            }
+            li{float:left;
+            }
+            li{
+                display:block;
+                color:white;
+                text-align:center;
+                padding:14px 14px;
+                text-decoration:none;
+            }
+            column{ float:left;
+                    text-align:center;
+                     width:23%;
+                     height:400px;
+                     padding:10px;
+                }
+            .row:after{content:"";
+                     display:table;
+                    clear:both;
+                    }
+                            *{box-sizing:border-box;
+                            }
+                    .row-single{
+                        height:200px;
+                        background-color:olive;
+                    }
+                        
+        </style>
+    </head>
+    <body>
+        <div id="logo">
+            <img id ="logo-img" src= "fewa.jpg">
+        </div>
+        <div class="topnav">
+            <ul>
+                <li><a class="active" href=" #home">Home</a></li>
+                <li><a href="#contact us">Contact Us</a></li>
+                <li><a href="#About Us">About Us</a></li>
+                <li><a href="regform.html">Registration</a></li>
+            </ul>
+        </div>
+        <img src="fewa.jpg" alt="background">
+        <div class="row">
+            <div class="column" style="background-color:brown">
+                <h2> Logo</h2>
+                <img src="fewa.jpg" id="logo-img">
+                <p>some text here.</p>
+            </div>
+            <div class="column" style="background-color:aqua">
+            <h2>Logo</h2>
+        <img src="fewa.jpg" id="logo-img">
+    <p>Some text here</p>
+</div>
+<div class="column" style="background-color:blue">
+    <h2>Logo</h2>
+<img src="fewa.jpg" id="logo-img">
+<p>Some text here</p>
+
+        </div>
+    </div>
+    <div class="row-single"></div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+.main{
+    background-color: red;
+    width:300px;
+    position: relative;
+    height:400px;   
+}
+.imagesection{
+    background-color: skyblue;
+    background-image: url(c.jpg);
+    width:140px;
+    height:140px;
+    background-position:top;
+    background-size:100% 100%;
+    background-repeat:no repeat;
+    border-radius: 100%;
+    margin:0px auto;
+
+}
+.midsection{
+    text-align: center;
+    width:fit-content;
+    font-size: 10px;
+}
+
+.texthead{
+    margin-right:5px;
+
+}
+
+.text1{
+    margin-top: 10px;
+    color:rgb(218, 2, 2);
+}
+.lastsection{
+    background-color:rgb(228, 30, 178);
+    color:white;
+    font-size:20px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display:flex;
+
+}

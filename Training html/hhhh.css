@@ -1,0 +1,227 @@
+
+/* css ko code */
+.body {
+    background-color: rgb(143, 157, 213);
+
+}
+
+.mainDiv {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    height: 100%;
+    margin: auto;
+    margin-top: 5%;
+    /* padding: 2%; */
+    width: 70%;
+    box-shadow: 2px 3px 10px black;
+    border-radius: 6px;
+}
+
+.form1 {
+
+    /* background-color: red; */
+    padding: 4%;
+    background-color: white;
+    width: 100%;
+    /* flex: 50%; */
+    /* height: 500px; */
+    border-radius: 5px 0px 0px 5px;
+
+
+    /* border-radius ko sides =left-top px, right-Top px, bottom-right px, bottom-left px */
+
+
+}
+
+.infoPart {
+    font-size: 20px;
+    /* width: fit-content; */
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(41, 28, 228);
+    /* margin-bottom: 5%; */
+}
+
+.formPart {
+    /* width: fit-content; */
+    display: flex;
+    flex-direction: column;
+}
+
+.formControl {
+
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    /* justify-content: center; */
+    /* background-color: pink; */
+    /* width: fit-content; */
+    /* border-bottom: 1px solid gray; */
+}
+
+.formControl label {
+
+    width: 80px;
+    /* background-color: rgb(188, 181, 181); */
+}
+
+.formControl input {
+    border: none;
+    border-bottom: 1px solid rgb(163, 161, 161);
+    outline: none;
+    width: 100%;
+    /* background-color: red; */
+    color: gray;
+    font-size: 16px;
+    padding: 8px;
+
+}
+
+.formControl select {
+    border: none;
+    border-bottom: 1px solid rgb(163, 161, 161);
+    outline: none;
+    width: 100%;
+    /* background-color: red; */
+    color: gray;
+    font-size: 16px;
+    padding: 8px;
+    cursor: pointer;
+    text-transform: capitalize;
+
+}
+
+
+.formControl ::placeholder {
+    text-transform: capitalize;
+    font-size: 16px;
+    /* border-bottom: 1px solid gray; */
+
+}
+
+/* yo chai first name and second name lai chuttauna use garna banako */
+.formControl1 {
+    /* background-color: red; */
+    width: 100%;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 50% 45%;
+    justify-content: space-between;
+}
+
+/* .formControl1 .formControl {
+    background-color: green;
+    width: 0%;
+} */
+
+/* css second part */
+.form2 {
+
+    background-color: rgb(60, 27, 143);
+    width: 100%;
+    /* flex: 50%; */
+    /* height: 500px; */
+    border-radius: 0px 5px 5px 0px;
+    padding: 4%;
+}
+
+.contactPart {
+    font-size: 20px;
+    /* width: fit-content; */
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    /* margin-bottom: 5%; */
+}
+
+.formPart2 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.formControls {
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+}
+
+.formControls input {
+    border: none;
+    border-bottom: 1px solid rgb(163, 161, 161);
+    outline: none;
+    width: 100%;
+    background-color: rgb(60, 27, 143);
+    color: white;
+    font-size: 16px;
+    padding: 8px;
+
+}
+
+.formControls select {
+    border: none;
+    border-bottom: 1px solid rgb(163, 161, 161);
+    outline: none;
+    width: 100%;
+    background-color: rgb(60, 27, 143);
+    color: white;
+    font-size: 16px;
+    padding: 8px;
+    cursor: pointer;
+    text-transform: capitalize;
+
+}
+
+.formControls ::placeholder {
+    text-transform: capitalize;
+    font-size: 16px;
+    color: white;
+    /* border-bottom: 1px solid gray; */
+
+}
+
+/* yo chai zip code and place  lai chuttauna use garna banako */
+
+.formControl2 {
+    /* background-color: red; */
+    width: 100%;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 30% 60%;
+    justify-content: space-between;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    color: white;
+    font-size: 13px;
+    font-weight: 100;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.forButton {
+    margin-top: 40px;
+}
+
+.submit:hover {
+    background-color: rgb(93, 154, 93);
+    color: white;
+}
+
+.submit {
+    border: none;
+    width: 180px;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+}
