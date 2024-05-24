@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* By default position is static */
+      body {
+        margin: 0;
+        padding: 0;
+        height: 200cm;
+      }
+      div {
+        height: 2cm;
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+      }
+      .a {
+        background-color: yellow;
+      }
+      .b {
+        background-color: green;
+        /* position: relative; */
+        /* left: 3cm; */
+        /* top: 3cm; */
+      }
+      .c {
+        background-color: pink;
+        /* position: absolute; */
+        position: sticky;
+        top: 0;
+        /* stop at top 0 */
+        /* height: 1cm; */
+        /* top: 3cm; */
+      }
+      .d {
+        background-color: skyblue;
+        position: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">HTML</div>
+    <div class="b">css</div>
+    <div class="c">js</div>
+    <div class="d">php</div>
+  </body>
+</html>
