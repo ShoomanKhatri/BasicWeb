@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+        <style>
+            *{
+     
+      text-align: center;
+    }
+        </style>
+    </head>
+
+<body>
+    <script>
+        function validateform() {
+
+
+    //         let username = document.getElementById("username").value;
+    //   let password = document.getElementById("password").value;
+    //   let phone = document.getElementById("phone").value;
+
+            var name = document.myform.name.value;
+            var password = document.myform.password.value;
+            var phone = document.myform.phone.value;
+
+            
+            if(name==""||password==""||phone==""){
+            alert("All fields are requred.");
+            return false;
+        }
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            // validate phone
+            if  (phone.length != 7) 
+                alert("Phone number must be a 7 digit number.");
+                return false;
+            
+        }  
+    </script>
+
+    
+        <form name="myform" method="post" action="" onsubmit="return validateform();">
+            <fieldset>
+                Name: <input type="text" name="name" /><br /><br />
+                Password: <input type="password" name="password"/><br /><br />
+                Number: <input type="number" name="phone" /><br />
+                <input type="submit" value="submit">
+            </fieldset>
+        </form>
+    </body>
+
+</html>

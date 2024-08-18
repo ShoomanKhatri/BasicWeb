@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function validateFormData(username, password, phone) {
+  let errors = [];
+  
+  // validate password
+  if (password == "") {
+    errors.push("Password is required.");
+  } else if (password.length < 6) {
+    errors.push("Password must be greater than 6 characters.");
+  }
+
+  // validate phone
+  if (phone == "") {
+    errors.push("Phone number is required.");
+  } else if (phone.length!= 7) {
+    errors.push("Phone number must be a 7 digit number.");
+  }
+}
+
+
+    </script>
+    <form name="F1" method="post">
+        <fieldset>
+            <legend id="leg">Form Validaton</legend>
+            <table border="0">
+                <tr>
+                    <td>Username:</td>
+                    <td>
+                        <input type="text" name="N" placeholder=" Enter your name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td>
+                        <input type="password" name="p" placeholder="Enter your age" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td>
+                        <input type="number" name="phone" id="phone"/>
+                    </td>
+                    <td><br /><button>Submit</button></td>
+                </tr>
+            </form>
+    
+</body>
+</html>

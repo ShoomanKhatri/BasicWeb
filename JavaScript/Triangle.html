@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Classification</title>
+</head>
+<body>
+    <h1>Triangle </h1>
+    <form id="triangleForm">
+        <label for="side1">Side A :</label>
+        <input type="number" id="side1" required><br><br>
+
+        <label for="side2">Side B:</label>
+        <input type="number" id="side2" required><br><br>
+
+        <label for="side3">Side C:</label>
+        <input type="number" id="side3" required><br><br>
+
+        <input type="button" value="check" onclick="check();"><br>
+        <label>Result</label>
+        <input type="text" id="result" name="result" value="" >
+    </form>
+
+    
+
+    <script>
+        function check() {
+            const side1 = parseFloat(document.getElementById("side1").value);
+            const side2 = parseFloat(document.getElementById("side2").value);
+            const side3 = parseFloat(document.getElementById("side3").value);
+
+            if (isNaN(side1) || isNaN(side2) || isNaN(side3)) {
+                document.getElementById("result").value = "Please enter valid side lengths.";
+                return;
+            }
+
+            if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
+                document.getElementById("result").value = "Invalid input: All sides must be greater than zero.";
+                return;
+            }
+
+            if (side1 === side2 && side2 === side3) {
+                document.getElementById("result").value = "Equilateral triangle";
+            } else if (side1 === side2 || side2 === side3 || side1 === side3) {
+                document.getElementById("result").value = "Isosceles triangle";
+            } else {
+                document.getElementById("result").value = "Scalene triangle";
+            }
+        }
+    </script>
+</body>
+</html>

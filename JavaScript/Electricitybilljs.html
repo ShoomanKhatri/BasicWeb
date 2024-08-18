@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var amt=0;
+        var unit=prompt("Enter Reading:");
+        if(unit <= 50)
+    {
+         var amt = unit * 3.50;
+    }
+    else if(unit <= 150)
+    {
+        amt =  50*3.5+((unit-50) * 4);
+    }
+    else if(unit <= 250)
+    {
+        amt =  50*3.5+100*4+((unit-150) * 5.20);
+    }
+    else
+    {
+        amt = 50*3.5+100*4+100*5.2+ ((unit-250) * 6.50);
+    }
+    
+    document.write(amt);
+    </script>
+    
+</body>
+</html>

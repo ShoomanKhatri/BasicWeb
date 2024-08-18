@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input N on Array.</title>
+</head>
+<body>
+    <script>
+     let userInput = [];
+let input;
+let total = 0;
+let count = 0;
+
+do {
+  input = prompt("Enter a number, or type 'no' to stop:");
+
+  if (input !== "no") {
+    userInput.push(Number(input));
+    total += userInput[count];
+    count++;
+  }
+} while (input !== "no");
+
+if (count > 0) {
+  const average = total / count;
+  console.log(`The average of ${count} numbers is ${average}.`);
+} else {
+  console.log("No numbers were entered.");
+}
+
+    </script>
+    
+</body>
+</html>

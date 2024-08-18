@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input N on Array.</title>
+</head>
+<body>
+    <script>
+        let numbers = [];
+        let input = "";
+        let sum = [];
+
+        while (input !== "no") {
+          input = prompt("Enter a number (or no to stop): ");
+          if (input !== "no") {
+            numbers.push(parseFloat(input));
+            sum.push(parseFloat(input));
+          }
+        }
+
+        let avg = sum.reduce((a, b) => a + b, 0) / numbers.length;
+        document.write("The average of the numbers is: " + avg);
+
+    </script>
+</body>
+</html>

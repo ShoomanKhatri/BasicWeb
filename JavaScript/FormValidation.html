@@ -1,0 +1,246 @@
+<html>
+<head>
+    <title>Form Validation</title>
+    <script type="text/javascript">
+        function main() {		
+            var name = document.F1.N.value;
+            var age = document.F1.A.value;
+            var male = document.getElementById('male').checked;
+            var female = document.getElementById('female').checked;
+            var password = document.F1.P.value;
+            var confirm = document.F1.CP.value;
+            var email = document.F1.email.value;
+            var Gender = document.getElementsByName('G');
+            var a = checks(Gender);
+            var Ho = document.getElementsByName('H');
+			var Co = document.getElementById('country');
+            var b = "", r = 0;
+            for (var i = 0; i < Ho.length; i++) {
+                if (Ho[i].checked) {
+                    b += Ho[i].value + ",";
+                    r++;
+                }
+            }
+            if (isEmpty(name) == false) {
+                alert("name should be filled");
+            }
+            else if (checkAge(age) == false) {
+                alert("age should be between 18 to 40");
+            }
+            else if (gender(male, female) == false) {
+                alert("gender should be selected ");
+            }
+            else if (r < 2) {
+                alert("Atleast 2 hobbies should be checked");
+            }
+            else if (country() == false) {
+                alert("country should be selected");
+            }
+			else if (isEmpty(password) == false) {
+                alert("password should be filled.");
+            }
+            else if (checkPassword(password, confirm) == false) {
+                alert("Password not matched");
+            }
+            else if (isValid(email) == false) {
+                alert("email should be valid");
+            }
+            else {
+                alert("Name : " + name + "\nAge : " + age + "\ngender : " + a + "\nHobbies : " + b + "\nCountry : " + Co.value + "\nPassword : " + password + "\nE-mail : " + email);
+				return true;
+            }
+			return false;
+        }
+        function isEmpty(n) {
+            if (n == "") {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function checkAge(a) {
+            if (a < 18 || a > 40) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function gender(a, b) {
+            if (a == false && b == false) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function hobbies(a, b, c) {
+            if (a == false && b == false || a == false && c == false || b == false && c == false) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function country() {
+            if (document.F1.Country.selectedIndex == 0) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function checkPassword(a, b) {
+            if (a.length == b.length) {
+                for (var i = 0; i < a.length; i++) {
+                    if (a[i] == b[i]) {
+                        return true;
+                    }
+                }
+            }
+            else {
+                return false;
+            }
+        }
+        function isValid(a) {
+            var m = 0, n = 0;
+            for (var i = 0; i < a.length; i++) {
+                if (a[i] == '@')
+                    n++;
+            }
+            for (var i = 0; i < a.length; i++) {
+                if (a[i] == '.')
+                    m++;
+            }
+            if (a == '') {
+                return false;
+            }
+            else if (n != 1 || m != 1) {
+                return false;
+            }
+            else if (a.indexOf("@") > a.indexOf(".")) {
+                return false;
+            }
+            else if (a.indexOf(".") - a.indexOf("@") < 3) {
+                return false;
+            }
+            else if (a.indexOf(".") == 0 || a.indexOf("@") == 0) {
+                return false;
+            }
+            else if (!isNaN(a.charAt(0))) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        function checks(a) {
+            for (var i = 0; i < a.length; i++) {
+                if (a[i].checked) {
+                    return a[i].value;
+                }
+            }
+        }
+</script>
+    <style type="text/css">
+        #main {
+            width: 800px;
+            margin: 0 0 0 10px;
+        }
+
+        #main1 {
+            width: 450px;
+            float: left;
+        }
+
+        #orm {
+            padding-top: 100px;
+        }
+
+        #leg {
+            color: #f99;
+        }
+
+        input {
+            color: red;
+        }
+    </style>
+</head>
+<body id="main">
+    <form name="F1" method="post" onsubmit="return main()" id="main1">
+        <fieldset>
+            <legend id="leg">Form Validaton</legend>
+            <table border="0">
+                <tr>
+                    <td>Name:</td>
+                    <td>
+                        <input type="text" name="N" placeholder="Enter full Name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td>
+                        <input type="text" name="A" placeholder="Enter your age" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="G" value="male" id="male" />Male<input type="Radio" name="G" value="female" id="female" />Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobbies:</td>
+                    <td>
+                        <input type="checkbox" name="H" id="play" value="Playing Games" />
+                        Playing games
+                        <input type="checkbox" name="H" id="dance" value="Dancing" />
+                        Dancing
+                        <input type="checkbox" name="H" id="sing" value="Singing" />
+                        Singing</td>
+                </tr>
+                <tr>
+                    <td>country:</td>
+                    <td>
+                        <select id="country" name="Country">
+                            <option value="None" id="none">Select country</option>
+                            <option value="Nepal" id="nepal">Nepal</option>
+                            <option value="China" id="china">China</option>
+                            <option value="Pakistan" id="pakistan">Pakistan</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>password :</td>
+                    <td>
+                        <input type="password" name="P" placeholder="Enter Password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Confirm Password : </td>
+                    <td>
+                        <input type="password" name="CP" placeholder="retype password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td>
+                        <input type="text" name="email" placeholder="Enter E-mail id" />
+                    </td>
+                </tr>
+                <td></td>
+                <td>
+                    <input type="submit" name="S" value="Submit" />
+                    <input type="reset" name="R" value="Reset" />
+                </td>
+            </table>
+        </fieldset>
+    </form>
+	<script>
+	console.log(document.forms[0].elements);
+	</script>
+	
+</body>
+</html>

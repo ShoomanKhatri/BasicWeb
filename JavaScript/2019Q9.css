@@ -1,0 +1,11 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.operand_container{
+    width:200px;
+    /* border:2px solid red; */
+    display:flex;
+    gap:1rem;
+    flex-wrap: wrap;
+    padding-block: 1rem;
+}

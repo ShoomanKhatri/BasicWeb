@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<script>
+			function Add(){
+				var operand1 = parseInt(document.getElementById("txtOperand1").value);
+				var operand2 = parseInt(document.getElementById("txtOperand2").value);
+				var result = operand1 + operand2;
+				document.getElementById("txtResult").value = result;
+			}
+			
+			function Sub(){
+				var operand1 = parseInt(document.getElementById("txtOperand1").value);
+				var operand2 = parseInt(document.getElementById("txtOperand2").value);
+				var result = operand1 - operand2;
+				document.getElementById("txtResult").value = Math.abs(result);
+			}
+			
+			function Calculate(operator){
+				var result = 0;
+				var operand1 = parseInt(document.getElementById("txtOperand1").value);
+				var operand2 = parseInt(document.getElementById("txtOperand2").value);
+				switch(operator){
+					case "+":
+						result = operand1 + operand2;
+					break;
+					case "-":
+					 result = Math.abs(operand1 - operand2);
+					 break;
+				}
+				document.getElementById("txtResult").value = result;
+			}
+			
+			window.onload = function(e){ 
+				 document.getElementById("btnSubtract").addEventListener("click", 
+				 function(e) {
+					Calculate('-');
+				 });
+			}
+		</script>
+	</head>
+	<body>		
+		<form>
+		<input type="text" id="txtOperand1" name="txtOperand1" placeholder="Operand1" /><br/>
+		<input type="text" id="txtOperand2" name="txtOperand2" placeholder="Operand2" /><br/>
+		<input type="button" id="btnAdd" value="Add" onclick="Calculate('+');" />
+		<input type="button" id="btnSubtract" value="Subtract" /><br/>
+		<input type="text" id="txtResult" name="txtResult" placeholder="Result" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Add(){
+            var operand1 =parseInt(document.getElementById("txtoperand1").value);
+            var operand2 =parseInt(document.getElementById("txtoperand2").value);
+            var result= operand1 + operand2;
+            document.getElementById("txtResult").value=result;
+        }
+
+
+        function Sub(){
+            var operand1 =parseInt(document.getElementById("txtoperand1").value);
+            var operand2 =parseInt(document.getElementById("txtoperand2").value);
+            var result= operand1 - operand2;
+            document.getElementById("txtResult").value=result;
+        }
+
+        // window.onload=function(e){
+            // document.getElementById("btnSub").addEventListener("click",function(e)
+            // { 
+                // Sub();
+            // });
+        // }
+       
+
+    </script>
+
+<input type="text" id="txtoperand1" name="txtoperand1" placeholder="operand1" /><br/>
+<input type="text" id="txtoperand2" name="txtoperand2" placeholder="operand2" /><br/>
+<input type="button" id="btnAdd" value="Add" onclick="Add();" /><br/>
+<input type="button" id="btnSub" value="Sub" onclick="Sub();" /><br/>
+<input type="text" id="txtResult" name="txtResult" placeholder="Result" /><br/>
+
+    
+</body>
+</html>
